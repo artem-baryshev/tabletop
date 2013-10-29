@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QGLWidget>
+#include <QtOpenGL>
+#include "pointers.h"
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +20,7 @@ public:
     
 private:
     Ui::MainWindow *ui;
+    TSharedPtr <QGLWidget> gl;
 };
 
 #endif // MAINWINDOW_H
