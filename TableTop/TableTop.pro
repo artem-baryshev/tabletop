@@ -11,11 +11,16 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    tglwindow.cpp
+    tglwindow.cpp \
+    tworld.cpp \
+    tfighter.cpp \
+    tobject.cpp
 
-HEADERS  += mainwindow.h \
+HEADERS  += \
     pointers.h \
-    tglwindow.h
+    tglwindow.h \
+    tworld.h \
+    tfighter.h \
+    tobject.h
 
 FORMS    += mainwindow.ui

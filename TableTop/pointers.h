@@ -127,6 +127,11 @@ public:
         ptr = src.ptr;
     }
 
+    TWeakPtr & operator = (T *pointer)
+    {
+        ptr = pointer;
+    }
+
     T * get()
     {
         return ptr;
