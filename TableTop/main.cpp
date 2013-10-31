@@ -1,4 +1,6 @@
-#include <QtGui/QApplication>
+//#include <QtGui/QApplication>
+//#include <QtGui
+#include <QApplication>
 #include <QGLWidget>
 #include <QtOpenGL>
 #include "pointers.h"
