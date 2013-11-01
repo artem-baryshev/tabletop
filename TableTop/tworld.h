@@ -4,7 +4,8 @@
 #include <QObject>
 #include <QPainter>
 #include <QPaintEvent>
-#include "tobject.h"
+
+#include "tfighter.h"
 
 class TWorld : public QObject
 {
@@ -15,7 +16,8 @@ public:
 signals:
     
 public slots:
-    
+private:
+    TSharedPtr <TFighter> f1, f2;
 };
 
 #endif // TWORLD_H

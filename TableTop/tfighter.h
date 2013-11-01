@@ -1,7 +1,6 @@
 #ifndef TFIGHTER_H
 #define TFIGHTER_H
 
-#include <QObject>
 #include "tobject.h"
 
 class TFighter : public TObject
