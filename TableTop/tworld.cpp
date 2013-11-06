@@ -1,4 +1,5 @@
 #include "tworld.h"
+#include <QDebug>
 
 TWorld::TWorld(QObject *parent) :
     QObject(parent)
@@ -9,6 +10,12 @@ TWorld::TWorld(QObject *parent) :
     f2 = new TFighter();
     f2->setPosition(TPosition(150, 50));
     f2->setOrientation(TOrientation(1, 0));
+
+    tmr = new QTimer(this);
+
+    connect(&*tmr, SIGNAL(timeout()), this, SLOT(onTimer()));
+
+    tmr->start(100);
 }
 
 void TWorld::paint(QPainter *painter, QPaintEvent *event)
@@ -17,11 +24,10 @@ void TWorld::paint(QPainter *painter, QPaintEvent *event)
     pars.event = event;
     pars.painter = painter;
     f1->paint(pars);
-//    painter->save();
-//    painter->viewport().moveTo(f2->Position().toPoint());
-//    painter->window().moveTo(f2->Position().toPoint());
-//    painter->rotate(15);
-//    painter->restore();
     f2->paint(pars);
-//    painter->rotate(45);
+}
+
+void TWorld::onTimer()
+{
+
 }

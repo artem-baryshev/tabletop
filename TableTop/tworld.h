@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QPainter>
 #include <QPaintEvent>
+#include <QTimer>
 
 #include "tfighter.h"
 
@@ -16,8 +17,10 @@ public:
 signals:
     
 public slots:
+    void onTimer();
 private:
     TSharedPtr <TFighter> f1, f2;
+    TSharedPtr <QTimer> tmr;
 };
 
 #endif // TWORLD_H
