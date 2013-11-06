@@ -17,5 +17,11 @@ void TWorld::paint(QPainter *painter, QPaintEvent *event)
     pars.event = event;
     pars.painter = painter;
     f1->paint(pars);
+//    painter->save();
+//    painter->viewport().moveTo(f2->Position().toPoint());
+//    painter->window().moveTo(f2->Position().toPoint());
+    painter->rotate(15);
+//    painter->restore();
     f2->paint(pars);
+    painter->rotate(45);
 }

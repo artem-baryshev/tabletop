@@ -14,7 +14,17 @@ struct TPaintParameters
     QPaintEvent *event;
 };
 
-typedef QPointF TPosition;
+class TPosition : public QPointF
+{
+public:
+    TPosition() : QPointF() {}
+    TPosition(const QPoint &p) : QPointF(p) {}
+    TPosition(qreal x, qreal y) : QPointF(x, y) {}
+    TPosition(const TPosition &p) : QPointF(p.x(), p.y()) {}
+    TPosition movedX(qreal dx) {return TPosition(x() + dx, y());}
+    TPosition movedY(qreal dy) {return TPosition(x(), y() + dy);}
+    TPosition moved(TPosition dp) {return TPosition(*this).movedX(dp.x()).movedY(dp.y());}
+};
 //typedef QPointF TOrientation;
 class TOrientation : public QPointF
 {
