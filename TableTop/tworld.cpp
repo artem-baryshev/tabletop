@@ -5,10 +5,10 @@ TWorld::TWorld(QObject *parent) :
 {
     f1 = new TFighter();
     f1->setPosition(TPosition(50, 50));
-    f1->setOrientation(TOrientation(1, 0));
+    f1->setOrientation(TOrientation(20));
     f2 = new TFighter();
     f2->setPosition(TPosition(150, 50));
-    f2->setOrientation(TOrientation(-1, 0));
+    f2->setOrientation(TOrientation(1, 0));
 }
 
 void TWorld::paint(QPainter *painter, QPaintEvent *event)
@@ -20,8 +20,8 @@ void TWorld::paint(QPainter *painter, QPaintEvent *event)
 //    painter->save();
 //    painter->viewport().moveTo(f2->Position().toPoint());
 //    painter->window().moveTo(f2->Position().toPoint());
-    painter->rotate(15);
+//    painter->rotate(15);
 //    painter->restore();
     f2->paint(pars);
-    painter->rotate(45);
+//    painter->rotate(45);
 }

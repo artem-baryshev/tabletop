@@ -1,0 +1,13 @@
+INPUT(
+./debug\main.o
+./debug\tglwindow.o
+./debug\tworld.o
+./debug\tfighter.o
+./debug\tobject.o
+./debug\tsword.o
+./debug\moc_tglwindow.o
+./debug\moc_tworld.o
+./debug\moc_tfighter.o
+./debug\moc_tobject.o
+./debug\moc_tsword.o
+);

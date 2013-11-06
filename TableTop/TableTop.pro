@@ -14,13 +14,15 @@ SOURCES += main.cpp\
     tglwindow.cpp \
     tworld.cpp \
     tfighter.cpp \
-    tobject.cpp
+    tobject.cpp \
+    tsword.cpp
 
 HEADERS  += \
     pointers.h \
     tglwindow.h \
     tworld.h \
     tfighter.h \
-    tobject.h
+    tobject.h \
+    tsword.h
 
-FORMS    += mainwindow.ui
+FORMS    +=

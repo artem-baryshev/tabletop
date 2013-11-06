@@ -1,0 +1,13 @@
+INPUT(
+./release\main.o
+./release\tglwindow.o
+./release\tworld.o
+./release\tfighter.o
+./release\tobject.o
+./release\tsword.o
+./release\moc_tglwindow.o
+./release\moc_tworld.o
+./release\moc_tfighter.o
+./release\moc_tobject.o
+./release\moc_tsword.o
+);

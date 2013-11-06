@@ -4,9 +4,8 @@
 #include <QObject>
 #include <QPainter>
 #include <QPaintEvent>
-
+#include <math.h>
 #include "pointers.h"
-
 
 struct TPaintParameters
 {
@@ -29,9 +28,14 @@ public:
 class TOrientation : public QPointF
 {
 public:
-    TOrientation() : QPointF() {}
-    TOrientation(const QPoint &p) : QPointF(p) {}
-    TOrientation(qreal x, qreal y) : QPointF(x, y) {}
+    TOrientation() : QPointF(1, 0) { angle = 0; }
+    TOrientation(qreal a) : QPointF(sin(a * M_PI / 180), cos(a * M_PI / 180)) { resetAngle(); }
+    TOrientation(const QPoint &p) : QPointF(p) { resetAngle(); }
+    TOrientation(qreal x, qreal y) : QPointF(x / sqrt(x*x + y*y), y / sqrt(x*x + y*y)) { resetAngle(); }
+    qreal getAngle();
+private:
+    void resetAngle();
+    qreal angle;
 };
 
 class TObject : public QObject
@@ -43,8 +47,8 @@ public:
     void setPosition(TPosition Pos);
     void setOrientation(TOrientation Orient);
     virtual void paint(TPaintParameters &p) = 0;
-    QPointF Position();
-    QPointF Orientation();
+    TPosition Position();
+    TOrientation Orientation();
 signals:
     
 public slots:
