@@ -13,7 +13,7 @@ class TWorld : public QObject
     Q_OBJECT
 public:
     explicit TWorld(QObject *parent = 0);
-    void paint(QPainter *painter, QPaintEvent *event);
+    void paint(TPaintParameters &pars);
 signals:
     
 public slots:

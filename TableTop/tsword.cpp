@@ -3,4 +3,5 @@
 TSword::TSword(TObject *parent) :
     TObject(parent)
 {
+
 }

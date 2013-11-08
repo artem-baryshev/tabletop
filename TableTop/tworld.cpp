@@ -18,11 +18,11 @@ TWorld::TWorld(QObject *parent) :
     tmr->start(100);
 }
 
-void TWorld::paint(QPainter *painter, QPaintEvent *event)
+void TWorld::paint(TPaintParameters &pars)
 {
-    TPaintParameters pars;
-    pars.event = event;
-    pars.painter = painter;
+//    TPaintParameters pars;
+//    pars.event = event;
+//    pars.painter = painter;
     f1->paint(pars);
     f2->paint(pars);
 }

@@ -14,7 +14,8 @@ int main(int argc, char *argv[])
 
     TSharedPtr <TWorld> g(new TWorld);
     TGLWindow w(g);
-    w.showFullScreen();
+//    w.showFullScreen();
+    w.show();
 //    MainWindow w;
 //    w.show();
     

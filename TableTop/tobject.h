@@ -4,13 +4,16 @@
 #include <QObject>
 #include <QPainter>
 #include <QPaintEvent>
+#include <QGLWidget>
 #include <math.h>
 #include "pointers.h"
 
 struct TPaintParameters
 {
-    QPainter *painter;
-    QPaintEvent *event;
+//    QPainter> painter;
+    QGLWidget * glwidget;
+//    QRect rect;
+//    QPaintEvent *event;
 };
 
 class TPosition : public QPointF
